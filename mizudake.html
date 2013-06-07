@@ -1,0 +1,421 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr" xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<title>{site_title}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-jp" />
+<link rel="stylesheet" href="{site_css}" type="text/css" />
+<link type="text/css" href="{gmo_header_css}" rel="stylesheet" media="screen,print" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{site_rss}" />
+<link rel="alternate" type="a20130603_50850820130603_508508pplication/atom+xml" href="{site_atom}" />
+<link rel="alternate" media="handheld" type="application/xhtml+xml" href="{mobile_url}" />
+<link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+
+<meta property="og:title" content="ペパボ新人デザイナーとエンジニアの研修ブログ" />
+<meta property="og:type" content="blog" />
+<meta property="og:site_name" content="ペパボ新人デザイナーとエンジニアの研修ブログ" />
+<meta property="og:image" content="http://mizudake.img.jugem.jp/20110803_1595425.gif" /><!-- @todo -->
+<meta property="fb:admins" content="100002226861520" />
+
+<script type="text/javascript" src="./template/js/cookie.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<!-- <script type="text/javascript" src="./template/more/js/scroll.js" /></script> -->
+
+<script type="text/javascript">
+	// jQuery.easing.easeInOutBack = function(e,f,a,i,h,g){if(g==undefined){g=1.70158}if((f/=h/2)<1){return i/2*(f*f*(((g*=(1.525))+1)*f-g))+a}return i/2*((f-=2)*f*(((g*=(1.525))+1)*f+g)+2)+a};
+	jQuery.easing.easeInCubic = function(e,f,a,h,g){return h*(f/=g)*f*f+a};
+$(function() {
+		// $("#page_top").css({'position':'fixed'});
+		$("#page_top").click(function () {
+			$('html,body').animate({ scrollTop: 0}, 500, 'easeInCubic');
+			return false;
+		});
+
+		// if ($)
+	});
+</script>
+
+<!-- <script type="text/javascript">
+// 	$(document).ready(function(){
+// 		$(document).pngFix();
+// 	});
+// </script> -->
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24944853-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+<body onLoad="javascript:initval();">
+{gmo_header_src}
+
+
+<a name="top" id="top"></a>
+<!-- wrapper -->
+<div id="wrapper_body">
+
+
+	<!-- header -->
+	<div id="header">
+		<!-- BEGIN title -->
+		<h1>{blog_name}</h1>
+<!--		<p>{blog_description}</p> -->
+		<!-- END title -->
+		<div class="description">
+			<p>ついに新卒研修がはじまったわ。まるで別の星に来ちゃったみたい。<br />くじけそう...でも泣かないわ。だって技術職だもん！</p>
+		</div>
+	</div>
+	<!-- /header/ -->
+
+<div id="wrapper">
+<a name="top" id="top"></a>
+
+
+
+<!-- content -->
+<div id="content">
+<div id="minna"></div>
+<div class="dance"></div>
+	<!-- main -->
+	<div id="main">
+
+		<!-- BEGIN sequel -->
+		<div class="entry_navi">
+		{prev_entry} | <a href="./">main</a> | {next_entry}
+		</div>
+		<!-- END sequel -->
+
+		<!-- BEGIN entry -->
+		<div class="entry_area">
+
+		<div class="date mb10">
+			<span class="year">{entry_year}.</span>
+			<span class="month">{entry_month}.{entry_day}</span>
+			</div>
+
+		<div class="entry_title title_user_{entry_user_id}">
+		 <div class="hukidasi_{entry_user_id}"></div><h2>{entry_title_link}</h2>
+		</div>
+
+			<div class="entry">{entry_description}</div>
+			<a name="sequel"></a>
+			<div class="entry">{entry_sequel}</div>
+			<br class="clear" />
+			<div class="side_btn"><!-- @todo social -->
+				<ul>
+					<li>{facebook_button}</li>
+					<li class="tw_btn">{tweet_button_none_en}</li>
+					<li>{hatena_bookmark_standard}</li>
+					<li class="love_btn">{love_soft}</li>
+				</ul>
+			</div>
+			<ul class="state">
+				<li class="link_moji">{category_name}</li>
+				<li class="link_moji">{entry_time}</li>
+				<li class="link_moji">{comment_num}</li>
+				<li class="link_moji">{trackback_num}</li>
+				<li>{pookmark_link}</li>
+				<li>{logpi_link}</li>
+			</ul>
+			{trackback_auto_discovery}
+		</div>
+		<!-- END entry -->
+
+		<!-- BEGIN comment_area -->
+		<a name="comments" id="comments"></a>
+		<div class="entry_area">
+			<dl id="com_area">
+			<dt class="title">コメント</dt>
+			<!-- BEGIN comment -->
+			<dt class="com_desc">{comment_description}</dt>
+			<dd>
+				<ul>
+				<li>{comment_name}</li>
+				<li>{comment_time}</li>
+				</ul>
+			</dd>
+			<!-- END comment -->
+			</dl>
+		</div>
+
+		<div class="entry_area">
+			<dl id="com_form">
+			<dt class="title">コメントする</dt>
+			<dd>
+			<form name="comment_area" id="comment_area" action="./?mode=comment" method="post">
+			<input type="hidden" name="entry_id" value="{entry_id}" class="input" />
+
+			<label for="name">name:</label><br/>
+			<input type="text" tabindex="1" name="name" id="name" value="{cookie_name}" class="input" /><br />
+
+			<label for="email">email:</label><br>
+			<input type="text" tabindex="2" name="email" id="email" value="{cookie_email}" class="input" /><br />
+
+			<label for="url">url:</label><br>
+			<input type="text" tabindex="3" name="url" id="url" value="{cookie_url}" class="input" /><br />
+
+			<label for="description">comments:</label><br />
+			<textarea tabindex="4" id="description" name="description" rows="5"></textarea><br />
+
+			<input type="submit" value="submit" class="btn" /><br /><br />
+			<input type="checkbox" name="set_cookie" value="1" id="set_cookie"><label for="set_cookie">入力情報を登録しますか？</label>
+
+
+
+			</form>
+			</dd>
+			</dl>
+		</div>
+		<!-- END comment_area -->
+
+
+		<!-- BEGIN trackback_area -->
+		<a name="trackback" id="trackback"></a>
+		<div class="entry_area">
+			<dl id="tb_form">
+			<dt class="title">この記事のトラックバックURL</dt>
+			<dd><input type="text" value="{trackback_url}" class="input" /></dd>
+			</dl>
+		</div>
+
+		<div class="entry_area">
+			<dl id="tb_area">
+			<dt class="title">トラックバック</dt>
+			<!-- BEGIN trackback -->
+			<dt class="tb_title">{trackback_title}</dt>
+			<dd>{trackback_excerpt}</dd>
+			<dd class="tb_state">
+				<ul>
+					<li>{trackback_blog_name}</li>
+					<li>{trackback_time}</li>
+				</ul>
+			</dd>
+			<!-- END trackback -->
+			</dl>
+		</div>
+		<!-- END trackback_area -->
+
+			<!-- BEGIN profile_area -->
+			<div class="entry_area">
+				<dl id="profile_area">
+				<dt class="title">プロフィール</dt>
+				<dd class="txt_bold">{profile_name}</dd>
+				<dd>{profile_description}</dd>
+				</dl>
+			</div>
+			<!-- END profile_area -->
+
+	</div>
+	<!-- /main/ -->
+
+		<!-- side -->
+	<div id="side">
+
+		<!-- paperboyロゴ -->
+			<p id="logo"><a href="http://www.paperboy.co.jp/"><img src="http://mizudake.img.jugem.jp/20130603_507835.png" alt="paperboy&co." /></a></p>
+		<!-- /paperboyロゴ/ -->
+
+			<dl>
+			<dt>デザイナー</dt>
+			<dd>
+				<a href="#"><img onMouseOut="this.src='http://mizudake.img.jugem.jp/20130603_508397.gif'" onMouseOver="this.src='http://mizudake.img.jugem.jp/20130603_508396.gif'" alt="putchom" src="http://mizudake.img.jugem.jp/20130603_508397.gif"/></a>
+			</dd>
+			<dd>
+				<a href="#"><img onMouseOut="this.src='http://mizudake.img.jugem.jp/20130603_508401.gif'" onMouseOver="this.src='http://mizudake.img.jugem.jp/20130603_508373.gif'" alt="naomeme" src="http://mizudake.img.jugem.jp/20130603_508401.gif"/></a>
+			</dd>
+			<dt class="mt10">エンジニア</dt>
+			<dd>
+				<a href="#"><img onMouseOut="this.src='http://mizudake.img.jugem.jp/20130603_508395.gif'" onMouseOver="this.src='http://mizudake.img.jugem.jp/20130603_508394.gif'" alt="okkun" src="http://mizudake.img.jugem.jp/20130603_508395.gif"/></a>
+			</dd>
+			<dd>
+				<a href="#"><img onMouseOut="this.src='http://mizudake.img.jugem.jp/20130603_508372.gif'" onMouseOver="this.src='http://mizudake.img.jugem.jp/20130603_508371.gif'" alt="kitak" src="http://mizudake.img.jugem.jp/20130603_508372.gif"/></a>
+			</dd>
+			<dd>
+				<a href="#"><img onMouseOut="this.src='http://mizudake.img.jugem.jp/20130603_508370.gif'" onMouseOver="this.src='http://mizudake.img.jugem.jp/20130603_508369.gif'" alt="gussan" src="http://mizudake.img.jugem.jp/20130603_508370.gif"/></a>
+			</dd>
+			<dd>
+				<a href="#"><img onMouseOut="this.src='http://mizudake.img.jugem.jp/20130603_508399.gif'" onMouseOver="this.src='http://mizudake.img.jugem.jp/20130603_508398.gif'" alt="takeo" src="http://mizudake.img.jugem.jp/20130603_508399.gif"/></a>
+			</dd>
+			</dl>
+
+                               <!--  <dl><dd><a href="http://theinterviews.jp/mizudake"><img src="http://mizudake.img.jugem.jp/20110913_1651411.gif" alt="" width="175" height="120" class="pict" /></a></dd></dl> -->
+
+			<!-- BEGIN calendar -->
+			<dl>
+			<dt>カレンダー</dt>
+			<dd class="calendar">
+                        {calendar}
+			</dd>
+			</dl>
+			<!-- END calendar -->
+
+
+			<!-- BEGIN freespace1 -->
+			<dl>
+			<dt>{freespace_title1}</dt>
+			<dd>
+			{freespace_contents1}
+			</dd>
+			</dl>
+			<!-- END freespace1 -->
+
+			<!-- BEGIN freespace2 -->
+			<dl>
+			<dt>{freespace_title2}</dt>
+			<dd>
+			{freespace_contents2}
+			</dd>
+			</dl>
+			<!-- END freespace2 -->
+
+			<!-- BEGIN freespace3 -->
+			<dl>
+			<dt>{freespace_title3}</dt>
+			<dd>
+			{freespace_contents3}
+			</dd>
+			</dl>
+			<!-- END freespace3 -->
+
+			<!-- BEGIN freespace4 -->
+			<dl>
+			<dt>{freespace_title4}</dt>
+			<dd>
+			{freespace_contents4}
+			</dd>
+			</dl>
+			<!-- END freespace4 -->
+
+			<!-- BEGIN freespace5 -->
+			<dl>
+			<dt>{freespace_title5}</dt>
+			<dd>
+			{freespace_contents5}
+			</dd>
+			</dl>
+			<!-- END freespace5 -->
+
+			<!-- BEGIN selected_entry -->
+			<dl>
+			<dt>最近の記事</dt>
+			<dd>
+			{selected_entry_list}
+			</dd>
+			</dl>
+			<!-- END selected_entry -->
+
+
+			<!-- BEGIN category -->
+			<dl>
+			<dt>カテゴリー</dt>
+			<dd>
+			{category_list}
+			</dd>
+			</dl>
+			<!-- END category -->
+
+			<!-- BEGIN archives -->
+			<dl>
+			<dt>アーカイブ</dt>
+			<dd>
+			{archives_list}
+			</dd>
+			</dl>
+			<!-- END archives -->
+
+
+
+
+			<!-- BEGIN link -->
+			<dl>
+			<dt>リンク</dt>
+			<dd>
+			{link_list}
+			</dd>
+			</dl>
+			<!-- END link -->
+
+
+
+			<!-- search -->
+			<dl>
+			<dt>サイト内検索</dt>
+			<dd>
+			<form method="get" action="./">
+				<table>
+					<tr>
+					<td valign="bottom">
+						<input id="search" name="search" size="20" style="width:100px" class="search" />
+					</td>
+					<td valign="bottom">
+						<input type="submit"value="search" class="btn" />
+					</td>
+					</tr>
+				</table>
+			</form>
+			</dd>
+			</dl>
+			<!-- /search/ -->
+
+
+			<!-- BEGIN jugem_ad -->
+			<dl>
+			<dt>P　R</dt>
+			<dd>
+			{ad}
+			</dd>
+			</dl>
+			<!-- END jugem_ad -->
+
+
+			<!-- powered -->
+
+			<dl>
+			<dt>powered</dt>
+			<dd>
+			{powered}
+			</dd>
+			</dl>
+			<!-- //powered -->
+
+	</div>
+	<!-- /side/ -->
+
+	<br class="clear" />
+
+	<div id="page_area">
+		<!-- BEGIN page -->
+		<div class="page_navi" style=" ">{prev_page_link} | {page_now}/{page_num}PAGES | {next_page_link}</div>
+		<!-- END page -->
+		<div id="page_top">
+			<img src="http://mizudake.img.jugem.jp/20130603_507662.gif" alt="">
+		<br class="clear" />
+	</div>
+		</div>
+	</div>
+
+
+	</div>
+	<!-- /content/ -->
+	<div id="footer">
+　　　　<address class="copyright">{copyright}</address>
+	</div>
+
+
+</div>
+
+</div>
+<!-- /wrapper/ -->
+
+</body>
+
+</html>

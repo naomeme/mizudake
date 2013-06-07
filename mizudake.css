@@ -1,0 +1,871 @@
+@charset "euc-jp";
+/* CSS Document */
+
+* {
+margin: 0;
+padding: 0;
+}
+
+* html #wrapper-body {
+	background-image: none;
+	position: relative;
+}
+
+body {
+	background: #333d40;
+	color: #333;
+	font-size: small;
+	font-family: "ＭＳ Ｐゴシック", "MS PGothic","ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka,  sans-serif;
+}
+
+a img {
+	border: 0;
+}
+
+/* =================================== */
+/* レイアウトの設定 */
+/* =================================== */
+
+/* 全体を囲うblock */
+
+#wrapper_body {
+	padding: 0;
+	background-image: url(http://mizudake.img.jugem.jp/20130603_508287.gif), url(http://mizudake.img.jugem.jp/20130531_502031.gif), url(http://mizudake.img.jugem.jp/20130603_508066.gif);
+	background-position: center 30px, 0 0, 0 2600px;
+	background-repeat: no-repeat, repeat, no-repeat;
+}
+
+#wrapper {
+	width: 890px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#header {
+	width: 890px;
+	height: 140px;
+	color: #000;
+	position: relative;
+	margin:40px auto 20px;
+	z-index: 200;
+}
+
+/* #main,#side用のblock */
+#content {
+	width: 890px;
+	margin: 0 auto;
+	padding: 5px 0 0 0;
+}
+
+#content #main {
+	float:left;
+	width: 640px;
+	margin: 0;
+}
+
+#content #side {
+	float: right;
+	background: #fafaf7;
+	width: 175px;
+	padding: 20px 15px 0 15px;
+	border-radius: 6px; /* 角丸：CSS3 */
+	-webkit-border-radius: 6px; /* 角丸：Chrome,Safari */
+	-moz-border-radius: 6px; /* 角丸：Firefox */
+	border: 1px solid #6aa4b5;
+}
+
+.mt10 { margin-top: 10px; }
+.mb10 { margin-bottom: 10px; }
+
+/*ページ送り*/
+#page_area {
+	margin:10px 0 0 0;
+}
+
+
+/* フッター */
+address {
+	padding: 280px 0 0px;/*@todo*/
+	margin: 5px 15px 0;
+	text-align:center;
+	font : 80%/1.5em "Trebuchet MS", Trebuchet;
+	font-weight: bolder;
+	font-style:normal;
+	color:#666;
+}
+
+/*フッター画像*/
+#footer {
+	width: 100%;
+	height: 330px;
+	background-image: url(http://mizudake.img.jugem.jp/20130603_508640.gif),url(http://mizudake.img.jugem.jp/20130531_501847.gif);
+	 background-repeat: no-repeat,repeat-x;
+	 background-position: center bottom, 80px bottom;
+	bottom:0;
+	left:0;
+	z-index: 0;
+	margin: 0 auto;
+}
+@media screen and (max-device-width: 1024px) {
+	#footer { display: none; }
+}
+
+/*宇宙*/
+#minna {
+	background: url(http://mizudake.img.jugem.jp/20130603_507610.gif) 0 0 no-repeat;
+	position: fixed;
+	z-index: 100;
+	width: 262px;
+	height: 55px;
+	bottom: 50px;
+	margin-left: 260px;
+}
+
+.dance {
+	background: url(http://mizudake.img.jugem.jp/20130603_507773.gif) 0 0 no-repeat;
+	width: 36px;
+	height: 60px;
+	position: absolute;
+	margin-left: 80px;
+	margin-top: 180px;
+}
+
+/*トップとぶ*/
+#page_top {
+	height: 142px;
+	width: 75px;
+	position: absolute;
+	right: 10px;
+	cursor: pointer;
+}
+#page_top a:hover {
+	background: none;
+}
+#page_top .on {
+	position: fixed;
+}
+#page_top .off {
+	position: absolute;
+}
+/* =================================== */
+/* リンクカラーの設定 */
+/* =================================== */
+
+/* 全般 */
+a 			{ color: #2A2666; text-decoration: underline; }
+a:link		{ color: #2A2666; text-decoration: underline; }
+a:visited	{ color: #2A2666; text-decoration: underline; }
+a:active	{ color: #2A2666; text-decoration: none; }
+a:hover		{ color: #2A2666; text-decoration: none; background:#c4dbe2;}
+
+/* ヘッダー */
+#header a 			{ color: #000; text-decoration: none; }
+#header a:link		{ color: #000; text-decoration: none; }
+#header a:visited	{ color: #000; text-decoration: none; }
+#header a:active	{ color: #000; text-decoration: none; }
+#header a:hover		{ color: #000; text-decoration: none; }
+
+/* エントリーエリア */
+
+# main .entry_area .entry p a		 	{ color: #2A2666; text-decoration: none; }
+# main .entry_area .entry p a:link 		{ color: #2A2666; text-decoration: none; }
+# main .entry_area .entry p a:visited	{ color: #2A2666; text-decoration: none; }
+# main .entry_area .entry p a:active	{ color: #2A2666; text-decoration: none; }
+# main .entry_area .entry p a:hover		{ color: #2A2666; text-decoration: none; background:#c4dbe2;}
+
+.state li a:hover	{ background: none; }
+.state .link_moji a:hover { background: #c4dbe2; }
+
+/* サイドコンテンツ */
+#side a 			{ color: #2A2666; text-decoration: none; }
+#side a:link		{ color: #2A2666; text-decoration: none; }
+#side a:visited		{ color: #2A2666; text-decoration: none; }
+#side a:active		{ color: #2A2666; text-decoration: none; }
+#side a:hover		{ color: #2A2666; text-decoration: none; }
+#side dd a:hover	{ background: none; }
+#side dd li a:hover { background: #c4dbe2; }
+#side #logo a:hover { background: none; }
+
+/* カレンダーcell */
+.calendar .cell a 				{ color: #2A2666; text-decoration: none; background:#EFEFEF; display:block;}
+.calendar .cell a:link			{ color: #2A2666; text-decoration: none; }
+.calendar .cell a:visited		{ color: #2A2666; text-decoration: none; }
+.calendar .cell a:active		{ color: #2A2666; text-decoration: underline; }
+.calendar .cell a:hover			{ color: #26CFFF; text-decoration: underline; }
+
+/* =================================== */
+/* 装飾の設定 */
+/* =================================== */
+
+/* 引用文のタグの初期値 */
+/*  blockquote {
+	border: 1px dotted #CCC;
+	padding:0.2em;
+	margin:10px;
+} */
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+	font: 0/0 sans-serif;
+}
+
+.submit {
+
+}
+
+/* =================================== */
+/* #header */
+/* =================================== */
+#header h1 {
+}
+
+#header p {
+	margin: 5px 0 0 25px;
+/*	text-indent: -9999px;
+*/	font-size: 0;
+	position: relative;
+}
+
+#header h1 a {
+	display: block;
+	text-indent: -9999px;
+	width: 335px;
+	height: 140px;
+	font-size: 0;
+    background: url(http://mizudake.img.jugem.jp/20130603_508508.gif) no-repeat;
+}
+
+#header .description {
+	width: 480px;
+	height: 100px;
+	position: absolute;
+	right: 50px;
+	top: 70px;
+	line-height: 1.6;
+}
+#header .description p {
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+}
+/* =================================== */
+/* #main */
+/* =================================== */
+
+/*エントリータイトル*/
+
+.entry_title {
+	margin: 0 0 15px 0; /* タイトル下のマージン */
+	padding: 0 0 0 58px; /* h2を右に寄せる */
+	min-height: 55px; /* アイコン画像の高さ */
+	position: relative;
+}
+
+.entry_title h2 {
+	padding: 10px 20px; /* 吹き出し内パディング */
+	position: relative;
+	top: 5px; /* 吹き出しの位置 */
+	border-radius: 10px; /* 角丸：CSS3 */
+	-webkit-border-radius: 10px; /* 角丸：Chrome,Safari */
+	-moz-border-radius: 10px; /* 角丸：Firefox */
+}
+
+/*エントリータイトルのリンク*/
+.entry_title h2 a 			{ color: #000000; text-decoration: none; }
+.entry_title h2 a:link		{ color: #000000; text-decoration: none; }
+.entry_title h2 a:visited	{ color: #000000; text-decoration: none; }
+.entry_title h2	a:active	{ color: #000000; text-decoration: none; }
+.entry_title h2 a:hover		{ color: #000000; text-decoration: none; background:none; }
+
+/*エントリータイトルのアイコン*/
+
+.title_user_1 {
+	background: url(http://mizudake.img.jugem.jp/20130603_507501.gif) 0 0 no-repeat;
+}
+.title_user_2 {
+	background: url(http://mizudake.img.jugem.jp/20130603_507501.gif) 0 0 no-repeat;
+}
+.title_user_3 {
+	background: url(http://mizudake.img.jugem.jp/20130603_507501.gif) 0 0 no-repeat;
+}
+.title_user_4 {
+	background: url(http://mizudake.img.jugem.jp/20130603_507501.gif) 0 0 no-repeat;
+}
+.title_user_5 {
+	background: url(http://mizudake.img.jugem.jp/20130603_507499.gif) no-repeat;
+}
+.title_user_6 {
+	background: url(http://mizudake.img.jugem.jp/20130603_507497.gif) no-repeat;
+}
+.title_user_7 {
+	background: url(http://mizudake.img.jugem.jp/20130603_507498.gif) no-repeat;
+}
+.title_user_8 {
+	background: url(http://mizudake.img.jugem.jp/20130603_507496.gif) no-repeat;
+}
+.title_user_9 {
+	background: url(http://mizudake.img.jugem.jp/20130603_507500.gif) no-repeat;
+}
+.title_user_10 {
+	background: url(http://mizudake.img.jugem.jp/20130603_507495.gif) no-repeat;
+}
+
+/*ふきだしのいろ*/
+.title_user_1 h2 {background: #efefef;}
+.title_user_2 h2 {background: #efefef;}
+.title_user_3 h2 {background: #efefef;}
+.title_user_4 h2 {background: #efefef;}
+
+.title_user_6 h2 {background: #d9ebe7;}
+/*ミント*/
+
+.title_user_5 h2 {background: #ece7f0;}
+/*むらさき*/
+
+.title_user_8 h2 {background: #fff9c3;}
+/*きいろ*/
+
+.title_user_10 h2 {background: #f9e8e8;}
+/*あか*/
+
+.title_user_7 h2 {background: #ffe7eb;}
+/*ピンク*/
+
+.title_user_9 h2 {background: #d0e4e9;}
+/*あお*/
+
+/*ふきだしのしっぽ*/
+/*.hukidasi_1 {
+	width: 21px;
+	height: 15px;
+	background: url(http://mizudake.img.jugem.jp/20110802_1593401.png) no-repeat;
+	position: absolute;
+	top: 18px;
+	left: 40px;
+}
+
+.hukidasi_2 {
+	width: 21px;
+	height: 15px;
+	background: url(http://mizudake.img.jugem.jp/20110802_1593402.png) no-repeat;
+	position: absolute;
+	top: 18px;
+	left: 40px;
+}
+
+.hukidasi_3 {
+	width: 21px;
+	height: 15px;
+	background: url(http://mizudake.img.jugem.jp/20110802_1593403.png) no-repeat;
+	position: absolute;
+	top: 18px;
+	left: 40px;
+}
+
+.hukidasi_4 {
+	width: 21px;
+	height: 15px;
+	background: url(http://mizudake.img.jugem.jp/20110802_1593404.png) no-repeat;
+	position: absolute;
+	top: 18px;
+	left: 40px;
+}*/
+
+/*エントリーナビゲーション*/
+#main .entry_navi{
+	text-align:center;
+	width: 600px;
+	margin: 0 0 10px 0;
+	padding: 3px 20px;
+	background: #ffffff;
+	border-radius: 6px; /* 角丸：CSS3 */
+	-webkit-border-radius: 6px; /* 角丸：Chrome,Safari */
+	-moz-border-radius: 6px; /* 角丸：Firefox */
+	border: 1px solid #6aa4b5;
+}
+
+/* エントリー部分全体 */
+#main .entry_area {
+	z-index: 150;
+	width: 600px;
+	margin: 0 0 30px 0;
+	padding: 16px 20px 20px 20px;
+	background: #fafaf7;
+	position: relative;
+	border-radius: 6px; /* 角丸：CSS3 */
+	-webkit-border-radius: 6px; /* 角丸：Chrome,Safari */
+	-moz-border-radius: 6px; /* 角丸：Firefox */
+	border: 1px solid #6aa4b5;
+}
+
+/* エントリータイトル */
+#main h2 {
+	font-size:medium;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+/* エントリー時刻 */
+#main .entry_date {
+	padding: 5px;
+}
+
+/* エントリー本文 */
+#main .entry {
+	margin: 10px 0 0 55px;
+	line-height: 1.6;
+
+}
+
+#main .entry p {
+	margin-bottom:20px;
+}
+
+#main .entry a:link {
+	margin-bottom:20px;
+}
+
+/* エントリー情報 */
+#main ul.state li {
+	display:inline;
+	border-left:1px solid #666;
+	padding-left:5px;
+	font-size:0.8em;
+}
+
+/* エントリーの中身 */
+.entry li {
+	line-height: 1.6;
+	color: gray;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+/*記事内の<li>タグ　てろまつバージョン*/
+#main .entry .list_tero li{
+    color:#000000;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.6;
+    list-style-type: circle;
+    margin: 0 0 0 20px;
+}
+
+#main .entry ul li{
+    color:#000000;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.6;
+    list-style-type: circle;
+    margin: 0 0 0 20px;
+}
+
+#main .entry ol li{
+    color:#000000;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.6;
+    margin: 0 0 0 20px;
+}
+
+.mizudake_wiki blockquote {
+    background: url("http://mizudake.img.jugem.jp/20110902_1637117.gif") no-repeat scroll 2% 6% transparent;
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    color: #212121;
+    padding: 10px 15px;
+}
+
+blockquote {
+    margin: 0;
+}
+
+#main .entry .mizudake_wiki  blockquote p {
+    margin-bottom: 10px;
+}
+
+/* Wikipediaから引用ってところ */
+
+#main .entry .mizudake_wiki .origin {
+    margin-bottom: 0;
+    text-align: right;
+}
+
+
+.entry h3 {
+	font-size: 13px;
+	font-weight: bolder;
+	border-bottom: 1px solid #DADADA;
+	border-left: 5px solid #39C;
+	padding: 5px 0 5px 10px;
+	margin: 0 0 10px -20px;
+}
+
+.entry h3.pb {
+	font-size: 13px;
+	font-weight: bolder;
+	border-bottom: 1px solid #DADADA;
+	border-left: 5px solid #39C;
+	padding: 5px 0 5px 10px;
+	margin: 0 0 30px -20px;
+}
+
+.entry h4 {
+	font-size: 12px;
+	font-weight: bolder;
+}
+
+.state {
+	text-align: right;
+}
+
+/*コメント、TB、プロフィールタイトル*/
+dl#com_area dt.title,
+dl#tb_form dt.title,
+dl#tb_area dt.title,
+dl#profile_area dt.title {
+	border-bottom:1px solid #f7cb42;
+	margin: 0 0 10px 0;
+	font-weight:bolder;
+	line-height: 1.6;
+}
+
+/* コメント本文 */
+.com_desc {
+	padding: 0 10px;
+	line-height: 1.6;
+}
+
+/* コメントユーザー情報 */
+dl#com_area dd {
+	padding:5px 10px;
+	margin: 5px 0 15px 0;
+	border-bottom:1px solid #CCC;
+	text-align:right;
+	font-size:0.8em;
+}
+
+dl#com_area dd ul {
+	list-style-type:none;
+}
+
+dl#com_area dd li {
+	display:inline;
+	border-left:1px solid #666;
+	padding-left:5px;
+}
+
+
+/* コメントフォーム */
+dl#com_form dd {
+padding: 0 10px 10px;
+}
+
+dl#com_form dd input.input {
+border-left:1px solid #CCC;
+border-top:1px solid #CCC;
+border-right:1px solid #CCC;
+border-bottom:1px solid #CCC;
+padding: 1px 0;
+width:200px;
+}
+
+.btn {
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	background-color: #99cfde;
+	border: solid 1px #6298a7;
+}
+.css_btn {
+	margin-left: 8px;
+	font-size:12px;
+	font-family:Arial;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #dcdcdc;
+	padding:4px 8px;
+	text-decoration:none;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #ffffff), color-stop(100%, #f6f6f6) );
+	background:-moz-linear-gradient( center top, #ffffff 5%, #f6f6f6 100% );
+	background:-ms-linear-gradient( top, #ffffff 5%, #f6f6f6 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6');
+	background-color:#ffffff;
+	color:#666666;
+	display:inline-block;
+	text-shadow:1px 1px 0px #ffffff;
+ 	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+ 	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+ 	box-shadow:inset 1px 1px 0px 0px #ffffff;
+}.css_btn:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #f6f6f6), color-stop(100%, #ffffff) );
+	background:-moz-linear-gradient( center top, #f6f6f6 5%, #ffffff 100% );
+	background:-ms-linear-gradient( top, #f6f6f6 5%, #ffffff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff');
+	background-color:#f6f6f6;
+}.css_btn:active {
+	position:relative;
+	top:1px;
+}
+
+/* コメントフォーム textarea */
+dl#com_form dd textarea {
+border:1px solid #CCC;
+width:250px;
+margin: 0 0 10px 0;
+}
+
+
+/* TBフォーム */
+dl#tb_form dd {
+	padding: 0 10px 10px;
+}
+
+dl#tb_form dd input.input {
+border-left:1px solid #CCC;
+border-top:1px solid #CCC;
+border-right:1px solid #CCC;
+border-bottom:1px solid #CCC;
+padding: 1px 0;
+width:300px;
+}
+
+/* TBタイトル */
+dl#tb_area dt.tb_title {
+	padding: 0 10px;
+}
+
+/* TB本文 */
+dl#tb_area dd {
+	padding: 0 10px;
+}
+
+
+/* TBユーザー情報 */
+dl#tb_area dd.tb_state {
+	padding:5px 10px;
+	margin: 5px 0 15px 0;
+	text-align:right;
+	font-size:0.8em;
+}
+
+.tb_state ul {
+	list-style-type:none;
+}
+
+.tb_state li {
+	display:inline;
+	border-left:1px solid #666;
+	padding-left:5px;
+}
+
+/* mini_side */
+.mini_side {
+	width: 70px;
+	padding: 10px;
+	position: absolute;
+	left: -91px;
+	top: 23px;
+	background: #c4dbe2;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+    -webkit-border-top-left-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+	-moz-border-radius-bottomleft: 6px;
+}
+
+.year {
+	font-size: 2em;
+	font-family: 'Play', sans-serif;
+	font-weight: bold;
+	}
+
+.month {
+	font-size: 2em;
+	font-weight: bold;
+	font-family: 'Play', sans-serif;
+}
+
+.day {
+	font-size: 2em;
+	font-weight: bold;
+	font-family: 'Play', sans-serif;
+}
+
+.side_btn ul{
+	list-style-type: none;
+}
+
+.side_btn li{
+	margin: 0 5px 0 0 ;
+	float: left;
+}
+
+.tw_btn {
+	margin-bottom: 3px;
+}
+
+.hatebu_btn {
+	margin-bottom: 3px;
+}
+
+.love_btn {
+	height: 13px;
+	margin-top: 4px;
+}
+
+.side_date {
+	margin-bottom: 10px;
+}
+
+/* =================================== */
+/* サイドコンテンツ */
+/* =================================== */
+
+#logo {
+	margin: 0 0 20px 15px;
+}
+
+#side dl {
+	margin-bottom:20px;
+}
+
+/* サイドタイトル */
+#side dt {
+	/*padding-left:20px;*/
+	background:url() no-repeat;/*@todo*/
+	background-position:left;
+	font-weight:bolder;
+	}
+
+#side dd{
+	padding:5px 0 0 0;
+}
+
+#side ul {
+	margin-left: 4px;
+	list-style-type: none;
+	line-height: 1.6;
+	}
+
+#side li {
+	margin: 3px 0 0 0;
+	padding-left: 8px;
+	background:url(./template/piano/img/side_disc.gif) no-repeat 0 8px;
+	}
+
+/* サイト内検索 */
+#side input.search {
+	border-left:1px solid #CCC;
+	border-top:1px solid #CCC;
+	border-right:1px solid #CCC;
+	border-bottom:1px solid #CCC;
+	padding: 1px 0;
+}
+
+#search_btn {
+	cursor: pointer;
+	border: 0;
+	width: 68px;
+	height: 48px;
+	background: url("http://mizudake.img.jugem.jp/20110810_1605714.png");
+}
+
+/*カレンダー*/
+.calendar {
+	font-size: 0.8em;
+}
+
+.calendar_month {
+	color: #666666;
+}
+
+
+.cell {
+	border-left:1px solid #CCC;
+	border-top:1px solid #CCC;
+	border-right:1px solid #CCC;
+	border-bottom:1px solid #CCC;
+	width: 22px;
+	height: 20px;
+	background:#FCFCFC;
+	text-align:center;
+	vertical-align:middle;
+}
+
+
+/* =================================== */
+/* ページ送り */
+/* =================================== */
+
+
+#page_area .page_navi {
+	float:left;
+	width:345px;
+	color: #fefefe;
+	margin-left: 10px;
+	}
+#page_area .page_navi a{
+	color: #F47878;
+}
+
+#page_area .page_top {
+	float:right;
+	width:150px;
+	text-align:right;
+}
+
+/*上からソーシャルボタン*/
+.id1{
+	display:none;
+}
+
+.id1eid{
+	display:block;
+	position:fixed;
+	width: 300px;
+	padding: 10px;
+	right: 30px;
+	top: -305px;
+	background: #ffffff;
+	border-radius: 6px; /* 角丸：CSS3 */
+	-webkit-border-radius: 6px; /* 角丸：Chrome,Safari */
+	-moz-border-radius: 6px; /* 角丸：Firefox */
+	border: 1px solid #000000;
+}
+
+.id2{
+	position:fixed;
+	width: 300px;
+	padding: 10px;
+	right: 30px;
+	top: -305px;
+	background: #ffffff;
+	border-radius: 6px; /* 角丸：CSS3 */
+	-webkit-border-radius: 6px; /* 角丸：Chrome,Safari */
+	-moz-border-radius: 6px; /* 角丸：Firefox */
+	border: 1px solid #000000;
+}
+
+.top_sbtn ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top_sbtn li{
+  float: left;
+  margin-right:3px;
+  padding: 0;
+}
