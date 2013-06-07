@@ -67,10 +67,7 @@ a img {
 	float: right;
 	background: #fafaf7;
 	width: 175px;
-	padding: 20px 15px 0 15px;
-	border-radius: 6px; /* 角丸：CSS3 */
-	-webkit-border-radius: 6px; /* 角丸：Chrome,Safari */
-	-moz-border-radius: 6px; /* 角丸：Firefox */
+	padding: 20px 15px 0 15px
 	border: 1px solid #6aa4b5;
 }
 
@@ -386,9 +383,9 @@ a:hover		{ color: #2A2666; text-decoration: none; background:#c4dbe2;}
 	margin: 0 0 10px 0;
 	padding: 3px 20px;
 	background: #ffffff;
-	border-radius: 6px; /* 角丸：CSS3 */
-	-webkit-border-radius: 6px; /* 角丸：Chrome,Safari */
-	-moz-border-radius: 6px; /* 角丸：Firefox */
+/*	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;*/
 	border: 1px solid #6aa4b5;
 }
 
@@ -400,9 +397,9 @@ a:hover		{ color: #2A2666; text-decoration: none; background:#c4dbe2;}
 	padding: 16px 20px 20px 20px;
 	background: #fafaf7;
 	position: relative;
-	border-radius: 6px; /* 角丸：CSS3 */
-	-webkit-border-radius: 6px; /* 角丸：Chrome,Safari */
-	-moz-border-radius: 6px; /* 角丸：Firefox */
+/*	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;*/
 	border: 1px solid #6aa4b5;
 }
 
@@ -839,9 +836,9 @@ dl#tb_area dd.tb_state {
 	right: 30px;
 	top: -305px;
 	background: #ffffff;
-	border-radius: 6px; /* 角丸：CSS3 */
-	-webkit-border-radius: 6px; /* 角丸：Chrome,Safari */
-	-moz-border-radius: 6px; /* 角丸：Firefox */
+/*	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;*/
 	border: 1px solid #000000;
 }
 
@@ -852,9 +849,9 @@ dl#tb_area dd.tb_state {
 	right: 30px;
 	top: -305px;
 	background: #ffffff;
-	border-radius: 6px; /* 角丸：CSS3 */
-	-webkit-border-radius: 6px; /* 角丸：Chrome,Safari */
-	-moz-border-radius: 6px; /* 角丸：Firefox */
+	/*border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;*/
 	border: 1px solid #000000;
 }
 
