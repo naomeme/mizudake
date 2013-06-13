@@ -47,7 +47,6 @@ a img {
 	color: #000;
 	position: relative;
 	margin:40px auto 20px;
-	z-index: 200;
 }
 
 /* #main,#side用のblock */
@@ -82,7 +81,7 @@ a img {
 
 /* フッター */
 address {
-	padding: 280px 0 0px;/*@todo*/
+	padding: 220px 0 0px;/*@todo*/
 	margin: 5px 15px 0;
 	text-align:center;
 	font : 80%/1.5em "Trebuchet MS", Trebuchet;
@@ -100,7 +99,6 @@ address {
 	 background-position: center bottom, 80px bottom;
 	bottom:0;
 	left:0;
-	z-index: 0;
 	margin: 0 auto;
 }
 @media screen and (max-device-width: 1024px) {
@@ -108,14 +106,18 @@ address {
 }
 
 /*宇宙*/
-#minna {
+#footer .wrap {
+	width: 980px;
+	margin: 0 auto;
+	position: relative;
+}
+.minna {
 	background: url(http://mizudake.img.jugem.jp/20130603_507610.gif) 0 0 no-repeat;
-	position: fixed;
-	z-index: 100;
+	position: relative;
 	width: 262px;
 	height: 55px;
-	bottom: 50px;
-	margin-left: 260px;
+	margin-left: 280px;
+	top: 220px;
 }
 
 .dance {
@@ -391,7 +393,6 @@ a:hover		{ color: #2A2666; text-decoration: none; background:#c4dbe2;}
 
 /* エントリー部分全体 */
 #main .entry_area {
-	z-index: 150;
 	width: 600px;
 	margin: 0 0 30px 0;
 	padding: 16px 20px 20px 20px;
